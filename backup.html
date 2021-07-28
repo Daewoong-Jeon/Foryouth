@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>For Youth</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+
+<body>
+    <div style="display: flex;">
+        <div style="width: 500px; height: 100px; font-size: 90px;">
+            <h1 style="font-size: 50px;">For Youth</h1>
+            <div>
+                <input type="button" id="list" style="width: 250px; height: 100px; font-size: 40px;"
+                    value="정부지원 list" />
+            </div>
+            <a href="https://www.google.com" style="font-size: 30px;">구글로 이동</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "http://apis.data.go.kr/B552555/lhNoticeInfo",
+            data: { serviceKey: "QAhz0fVQ0EaHGSFwGEwVJSdulqxl0mvQ9kOoUrcZMUpvsWVTIHRFhAwsxzqCmKJwxjHtWEXwiAlCVTeP0KNgJQ%3D%3D",
+                    PG_SZ: 10, PAGE: 1, SCH_ST_DT: "2019-01-03", SCH_ED_DT: "2019-10-10", PAGE: 1 },
+            //headers: { serviceKey: "QAhz0fVQ0EaHGSFwGEwVJSdulqxl0mvQ9kOoUrcZMUpvsWVTIHRFhAwsxzqCmKJwxjHtWEXwiAlCVTeP0KNgJQ%3D%3D" }
+        })
+            .done(function (msg) {
+                alert("Data Saved: " + msg);
+            });
+    </script>
+    <!--<script src="getapi.js"></script>-->
+</body>
+
+</html>
