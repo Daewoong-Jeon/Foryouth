@@ -3,6 +3,8 @@
 // 현재 날짜
 let today = new Date();
 var today_date = today.getFullYear() + '-' + today.getMonth() + '-' + today.getDate();
+
+// 한 페이지에 출력할 최대 공지글 수
 const num_get = 10;
 
 // XMLHttpRequest 객체 생성
@@ -28,7 +30,13 @@ xhr.onreadystatechange = function () {
     // 4 == XMLHttpRequest.DONE
     if (this.readyState == 4) {
         var myArray = this.responseText;
-        var obj = JSON.parse(myArray);
+        if (this.responseText[0] == "s")
+        {
+            let tmp = myArray.substr(454, myArray.length);
+            var obj = JSON.parse(tmp);
+        }
+        else
+            var obj = JSON.parse(myArray);
         buildTable(obj);
     }
 };
