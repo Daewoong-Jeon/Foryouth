@@ -3,12 +3,25 @@
 
 <head>
     <title>LHnotice</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        li { float: left; }
+        li a {
+            display: block;
+            background-color: #FFDA89;
+            padding: 8px;
+        }
+    </style>
     <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 </head>
 
 <body>
     <h1>청년관련 LH 청약센터 공지사항</h1>
-    <table border="1" summary="테이블">
+    <table id="notice" border="1">
         <colgroup>
             <col width="5%"/>
             <col width="10%"/>
@@ -16,19 +29,27 @@
             <col width="40%"/>
             <col width="35%"/>
         </colgroup>
-        <!-- <caption>테이블 이름</caption> -->
-        <tr>
-            <th>번호</th>
-            <th>게시 날짜</th>
-            <th>유형</th>
-            <th>제목</th>
-            <th>자세히 보기</th>
-        </tr>
-
-        <tbody id="table1">
-
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>게시 날짜</th>
+                <th>유형</th>
+                <th>제목</th>
+                <th>자세히 보기</th>
+            </tr>
+        </thead>
+        <tbody>
         </tbody>
     </table>
+    </table>
+    <!-- <ul>
+        <li><a href="file:///Users/mac/toyproject/ForYouth/LHnotice.html">1</a></li>
+        <li><a href="file:///Users/mac/toyproject/ForYouth/LHnotice.html">2</a></li>
+        <li><a href="file:///Users/mac/toyproject/ForYouth/LHnotice.html">3</a></li>
+        <li><a href="file:///Users/mac/toyproject/ForYouth/LHnotice.html">4</a></li>
+        <li><a href="file:///Users/mac/toyproject/ForYouth/LHnotice.html">5</a></li>
+    </ul> -->
+    <div id="pagination" style="text-align: center"></div>
     <script src="getapi.js"></script>
 </body>
 
