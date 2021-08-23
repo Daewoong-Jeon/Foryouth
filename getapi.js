@@ -13,7 +13,7 @@ var xhr = new XMLHttpRequest();
 var getApi = function (pageReq = 1) {
     // 요청보낼 서버의 url 작성
     var url = 'http://apis.data.go.kr/B552555/lhNoticeInfo/getNoticeInfo'; /*URL*/
-    var queryParams = '?' + encodeURIComponent('ServiceKey') + '=' + 'QAhz0fVQ0EaHGSFwGEwVJSdulqxl0mvQ9kOoUrcZMUpvsWVTIHRFhAwsxzqCmKJwxjHtWEXwiAlCVTeP0KNgJQ%3D%3D'; /*Service Key*/
+    var queryParams = '?' + encodeURIComponent('ServiceKey') + '=' + ''; /*Service Key*/
     queryParams += '&' + encodeURIComponent('PG_SZ') + '=' + encodeURIComponent(num_get); /**/
     queryParams += '&' + encodeURIComponent('PAGE') + '=' + encodeURIComponent(pageReq); /**/
     queryParams += '&' + encodeURIComponent('SCH_ST_DT') + '=' + encodeURIComponent('2020-01-01'); /**/
